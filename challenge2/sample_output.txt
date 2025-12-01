@@ -1,0 +1,32 @@
+=== Testing tokenizer on real dataset sentences ===
+
+Original: Maintaining optimal soil moisture improves crop yield.
+Token IDs: [402, 347, 149, 241, 350, 144, 359, 8]
+Tokens: ['Maintaining', 'optimal', 'soil', 'moisture', 'improves', 'crop', 'yield', '.']
+Decoded: Maintaining optimal soil moisture improves crop yield .
+Match: NO
+----------------------------------------------------------------------
+Original: Understanding growth stages helps optimize water use.
+Token IDs: [370, 151, 194, 251, 253, 141, 248, 8]
+Tokens: ['Understanding', 'growth', 'stages', 'helps', 'optimize', 'water', 'use', '.'] 
+Decoded: Understanding growth stages helps optimize water use .
+Match: NO
+----------------------------------------------------------------------
+Original: Different crops require specific water levels.
+Token IDs: [374, 279, 234, 286, 141, 288, 8]
+Tokens: ['Different', 'crops', 'require', 'specific', 'water', 'levels', '.']
+Decoded: Different crops require specific water levels .
+Match: NO
+----------------------------------------------------------------------
+Original: Automated irrigation systems enhance efficiency.
+Token IDs: [401, 123, 365, 364, 353, 8]
+Tokens: ['Automated', 'irrigation', 'systems', 'enhance', 'efficiency', '.']
+Decoded: Automated irrigation systems enhance efficiency .    
+Match: NO
+----------------------------------------------------------------------
+Original: Automated irrigation systems enhance efficiency.    
+Token IDs: [401, 123, 365, 364, 353, 8]
+Tokens: ['Automated', 'irrigation', 'systems', 'enhance', 'efficiency', '.']
+Decoded: Automated irrigation systems enhance efficiency .    
+Match: NO
+----------------------------------------------------------------------

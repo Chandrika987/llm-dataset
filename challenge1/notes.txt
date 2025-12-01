@@ -1,0 +1,190 @@
+
+
+# 📘 **Challenge 1 — Dataset Creation & Cleaning (Complete Notes)**
+
+*LLM Micro Challenge Series — Challenge 1 Documentation*
+
+---
+
+## 🔰 **Objective of Challenge 1**
+
+The goal of Challenge 1 was to:
+
+* Create a **domain-specific dataset**
+* Clean and normalize the text
+* Remove duplicates
+* Produce the dataset in two formats:
+  ✔ **JSONL** (line-by-line)
+  ✔ **Pretty JSON** (readable array)
+
+This dataset will act as the foundation for building tokenizer and later tasks.
+
+For this challenge, I prepared a dataset in the **Agriculture & Irrigation domain**, containing sentences related to:
+
+* soil moisture
+* drip irrigation
+* sustainable farming
+* pest management
+* fertilizer usage
+* crop growth stages
+
+---
+
+# 1️⃣ **Initial Dataset Creation**
+
+The dataset originated as:
+
+```
+agri_dataset_100.jsonl
+```
+
+It contained **100 synthetic samples** with fields like:
+
+* `id`
+* `title`
+* `text`
+* `source`
+* `domain`
+
+Each line was a JSON object, one per line — ideal for large-scale NLP workflows.
+
+---
+
+# 2️⃣ **Basic Cleaning (create_jsonl.py)**
+
+This step was used to:
+
+* Remove broken or malformed JSON lines
+* Strip unnecessary whitespace
+* Flatten multiline `content` fields
+* Ensure each line was a valid JSON entry
+
+### ✔ Output Produced:
+
+```
+agri_dataset_clean.jsonl
+```
+
+This file acted as the intermediate cleaned dataset.
+
+---
+
+# 3️⃣ **Deep Cleaning & Deduplication (clean_jsonl.py)**
+
+This was the main processing step and included:
+
+---
+
+## ✔ **Text Normalization**
+
+The following operations were performed on both titles and text:
+
+* **URL removal**
+* **HTML tag removal**
+* **Whitespace normalization** (multiple spaces → single space)
+* **Lowercasing** for consistency
+* **Trailing periods & formatting standardization**
+
+Normalized versions were saved as:
+
+* `title_clean`
+* `text_clean`
+
+---
+
+## ✔ **Deduplication**
+
+Because many entries had similar or repeated text, deduplication was performed using:
+
+```
+(title_clean, text_clean)
+```
+
+This ensures only unique content remains.
+
+The dataset reduced from **100 → ~60 unique items**.
+
+---
+
+## ✔ **Metadata Completion**
+
+If any entry lacked `"domain"`, the script added:
+
+```
+"domain": "agriculture"
+```
+
+This guarantees every sample is consistently labeled.
+
+---
+
+## ✔ **Final Saved Outputs**
+
+After processing, two final files were created:
+
+### 1. **Clean JSONL (line-by-line clean dataset)**
+
+```
+agri_dataset_clean.jsonl
+```
+
+Contains all cleaned, deduped, normalized entries.
+
+### 2. **Pretty JSON (easy-to-read dataset)**
+
+```
+agri_dataset_pretty.json
+```
+
+Contains the same data, but in a nicely formatted JSON array.
+
+---
+
+# 4️⃣ **How to Run Challenge 1 (Important)**
+
+Run the cleaning process using:
+
+```
+python clean_jsonl.py ../data/raw/agri_dataset_100.jsonl ../data/cleaned/agri_dataset_clean.jsonl ../data/cleaned/agri_dataset_pretty.json
+```
+
+### Expected Output:
+
+```
+loaded 100 items
+after dedupe: ~60 items
+saved agri_dataset_clean.jsonl agri_dataset_pretty.json
+```
+
+Once this runs successfully, Challenge 1 is complete.
+
+---
+
+# 5️⃣ **Final Dataset Quality**
+
+The final dataset is:
+
+### ✔ Clean
+
+(no URLs, no HTML, no extra spaces)
+
+### ✔ Normalized
+
+(lowercase, consistent formatting)
+
+### ✔ Deduped
+
+(~60 unique domain-relevant samples)
+
+### ✔ Domain-Specific
+
+(covers irrigation, soil, crops, nutrients, pests)
+
+### ✔ Ready for Tokenization
+
+(text is simple, repetitive, and domain-consistent — perfect for BPE)
+
+---
+
+# 🎉 **Challenge 1 Completed Successfully!**
+

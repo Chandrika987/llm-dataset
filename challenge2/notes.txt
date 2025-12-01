@@ -1,0 +1,171 @@
+
+
+# **Challenge 2 — Custom Tokenizer & Corpus Creation Notes**
+
+## **1. Problem Overview**
+
+* Objective: Create a **domain-specific tokenizer** for the Smart Irrigation / Agriculture dataset from Challenge 1.
+* Goals:
+
+  * Accurately encode and decode text.
+  * Preserve domain-specific terms.
+  * Prepare tokenizer for use in training a small LLM.
+
+**Dataset Used:** `agri_dataset_clean.jsonl` (cleaned dataset from Challenge 1).
+**Tools Used:** Python, HuggingFace Tokenizers library (Rust-based), Byte-Pair Encoding (BPE).
+
+---
+
+## **2. Step 1 — Building the Corpus**
+
+**Purpose:** Convert the JSON dataset into a simple text corpus suitable for tokenizer training.
+
+
+**Outcome:** Successfully created `corpus.txt`, a plain text corpus that preserves all dataset sentences.
+
+---
+
+## **3. Step 2 — Initial Tokenizer Training**
+
+**Goal:** Train a BPE tokenizer on the corpus.
+
+**Problem Observed:** When testing, the tokenizer could not perfectly reconstruct sentences. The decoded text often contained extra spaces or misplaced punctuation.
+
+**Reason:** The initial tokenizer setup used a simple whitespace-based pre-tokenizer, which cannot preserve punctuation or exact spacing.
+
+---
+
+## **4. Step 3 — Fixing Decoding Mismatches**
+
+**Change 1 — ByteLevel Pre-tokenizer and Decoder**
+
+* Switched to ByteLevel tokenization.
+* Purpose: Preserve whitespace and punctuation exactly.
+* Effect: Encoder and decoder began handling punctuation correctly.
+
+**Remaining Problem:** Extra leading spaces appeared in decoded text.
+
+**Change 2 — Disabled Leading Space**
+
+* Purpose: Remove automatically added leading spaces.
+* Effect: Decoded sentences now **exactly match** the original dataset sentences.
+
+**Outcome:** All encode-decode tests returned a **perfect match**, confirming correctness.
+
+---
+
+## **5. Step 4 — Testing the Tokenizer on the Dataset**
+
+* Random sentences from the dataset were selected.
+* Tokenizer tested by encoding and decoding each sentence.
+* Verified that:
+
+  * Token IDs correspond to correct tokens.
+  * Decoded text matches the original text perfectly.
+  * Domain-specific words (e.g., “irrigation,” “soil moisture”) are preserved.
+
+**Purpose:** Ensures the tokenizer is fully functional and ready for LLM training.
+
+---
+
+---
+
+## **6. Summary of All Changes and Their Purpose**
+
+| Change                                          | Why We Did It                         | Purpose / Use                                           |
+| ----------------------------------------------- | ------------------------------------- | ------------------------------------------------------- |
+| Switched from relative to absolute dataset path | Python could not locate file          | Corpus creation works reliably                          |
+| Converted JSON dataset to plain text corpus     | Tokenizer requires plain text input   | Provides ready-to-use training data                     |
+| Initial pre-tokenizer: Whitespace               | Simple starting method                | **Failed** — lost punctuation / spacing                 |
+| Switched to ByteLevel pre-tokenizer and decoder | Preserve exact spaces and punctuation | Ensures encode → decode round-trip                      |
+| Disabled automatic leading space                | Removed extra space at start          | Matches original sentences exactly                      |
+| Tested tokenizer on dataset sentences           | Verify domain-specific tokenization   | Confirms tokenizer is fully functional for LLM training |
+
+---
+
+## **7. Key Lessons Learned**
+
+* Domain-specific tokenizers need **careful pre-tokenizer and decoder configuration**.
+* ByteLevel BPE is ideal for GPT-style tokenization.
+* Testing on real dataset sentences is essential.
+* Absolute paths prevent file-not-found errors.
+* These changes ensure **perfect reproducibility**, critical for NLP and LLM training.
+
+---
+
+### **Result**
+
+* `custom_tokenizer.json` — fully functional domain-specific tokenizer
+* Corpus `corpus.txt` — prepared for tokenizer training
+* Tokenizer passes encode → decode tests with **perfect matches**
+* Ready for LLM training on agricultural/irrigation dataset
+---
+---
+# **What is a Tokenizer?**
+A **tokenizer** is a tool in Natural Language Processing (NLP) that **converts text into smaller units called tokens**.
+* Tokens can be **words, subwords, or even characters** depending on the tokenizer type.
+* Essentially, it **breaks down text into pieces** that a machine learning model can understand and process.
+---
+# **How a Tokenizer Works**
+
+1. **Text Input:** Raw text like:
+
+   ```
+   Smart irrigation optimizes water usage.
+   ```
+
+2. **Tokenization:** The tokenizer splits the text into units, e.g.:
+
+   ```
+   ['Smart', 'irrigation', 'optimizes', 'water', 'usage', '.']
+   ```
+
+3. **Encoding:** Converts tokens into **numerical IDs** so a model can process them:
+
+   ```
+   [101, 235, 543, 12, 876, 5]
+   ```
+
+4. **Decoding:** Converts the IDs back into **readable text**, maintaining the original meaning.
+
+---
+
+# **Types of Tokenizers**
+
+* **Word-level:** Splits text into words (`"Smart irrigation"` → `["Smart", "irrigation"]`)
+* **Character-level:** Splits text into individual characters (`"Smart"` → `["S","m","a","r","t"]`)
+* **Subword/BPE (Byte-Pair Encoding):** Splits text into smaller, meaningful chunks, often combining frequent sequences (`"optimizes"` → `["opt", "imize", "s"]`)
+
+Our **custom tokenizer** uses **BPE ByteLevel**, which is:
+
+* Efficient for unknown words
+* Preserves punctuation and spacing
+* Used in GPT-style models
+
+---
+
+# **Why Do We Need a Tokenizer?**
+
+1. **Convert text into a format models can understand:**
+   Machine learning models cannot directly understand words—they need numbers.
+
+2. **Handle unknown words:**
+   Subword tokenizers can break rare words into smaller known units.
+
+3. **Reduce vocabulary size:**
+   Instead of storing every possible word, a tokenizer uses subwords to cover the language efficiently.
+
+4. **Preserve meaning and structure:**
+   ByteLevel tokenizers maintain spaces, punctuation, and capitalization, which helps in generating accurate text.
+
+---
+
+# **In Short**
+
+A **tokenizer is the bridge** between human language and machine learning models:
+
+```
+Raw text → Tokens → IDs → Model → Output → Decode → Human-readable text
+```
+Without a tokenizer, an NLP model **cannot understand or process text properly**.
+---

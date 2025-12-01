@@ -1,0 +1,2126 @@
+{
+  "version": "1.0",
+  "truncation": null,
+  "padding": null,
+  "added_tokens": [
+    {
+      "id": 0,
+      "content": "[PAD]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 1,
+      "content": "[UNK]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 2,
+      "content": "[CLS]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 3,
+      "content": "[SEP]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 4,
+      "content": "[MASK]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    }
+  ],
+  "normalizer": null,
+  "pre_tokenizer": {
+    "type": "ByteLevel",
+    "add_prefix_space": false,
+    "trim_offsets": true,
+    "use_regex": true
+  },
+  "post_processor": null,
+  "decoder": {
+    "type": "ByteLevel",
+    "add_prefix_space": true,
+    "trim_offsets": true,
+    "use_regex": true
+  },
+  "model": {
+    "type": "BPE",
+    "dropout": null,
+    "unk_token": null,
+    "continuing_subword_prefix": null,
+    "end_of_word_suffix": null,
+    "fuse_unk": false,
+    "byte_fallback": false,
+    "ignore_merges": false,
+    "vocab": {
+      "[PAD]": 0,
+      "[UNK]": 1,
+      "[CLS]": 2,
+      "[SEP]": 3,
+      "[MASK]": 4,
+      "\"": 5,
+      ",": 6,
+      "-": 7,
+      ".": 8,
+      "0": 9,
+      "1": 10,
+      "2": 11,
+      "3": 12,
+      "4": 13,
+      "5": 14,
+      "6": 15,
+      "7": 16,
+      "8": 17,
+      "9": 18,
+      ":": 19,
+      "A": 20,
+      "B": 21,
+      "C": 22,
+      "D": 23,
+      "F": 24,
+      "G": 25,
+      "I": 26,
+      "M": 27,
+      "N": 28,
+      "O": 29,
+      "P": 30,
+      "R": 31,
+      "S": 32,
+      "U": 33,
+      "W": 34,
+      "_": 35,
+      "a": 36,
+      "b": 37,
+      "c": 38,
+      "d": 39,
+      "e": 40,
+      "f": 41,
+      "g": 42,
+      "h": 43,
+      "i": 44,
+      "k": 45,
+      "l": 46,
+      "m": 47,
+      "n": 48,
+      "o": 49,
+      "p": 50,
+      "q": 51,
+      "r": 52,
+      "s": 53,
+      "t": 54,
+      "u": 55,
+      "v": 56,
+      "w": 57,
+      "x": 58,
+      "y": 59,
+      "z": 60,
+      "{": 61,
+      "}": 62,
+      "Ċ": 63,
+      "č": 64,
+      "Ġ": 65,
+      "Ġ\"": 66,
+      "\":": 67,
+      "ti": 68,
+      "\",": 69,
+      "le": 70,
+      "ri": 71,
+      "an": 72,
+      "re": 73,
+      "te": 74,
+      "ag": 75,
+      "ro": 76,
+      "in": 77,
+      "on": 78,
+      "th": 79,
+      "tu": 80,
+      "ture": 81,
+      "ic": 82,
+      "ul": 83,
+      "es": 84,
+      "tion": 85,
+      ".\",": 86,
+      "cle": 87,
+      "cul": 88,
+      "tle": 89,
+      "xt": 90,
+      "title": 91,
+      "ricul": 92,
+      "text": 93,
+      "agricul": 94,
+      "clean": 95,
+      "agriculture": 96,
+      "as": 97,
+      "Ġs": 98,
+      "ain": 99,
+      "ation": 100,
+      "er": 101,
+      "en": 102,
+      "Ġi": 103,
+      "gation": 104,
+      "rri": 105,
+      "tic": 106,
+      "rrigation": 107,
+      "ter": 108,
+      "oi": 109,
+      "tas": 110,
+      "Ġw": 111,
+      "id": 112,
+      "lic": 113,
+      "ce": 114,
+      "om": 115,
+      "rop": 116,
+      "ater": 117,
+      "Ġp": 118,
+      "\"}": 119,
+      "atas": 120,
+      "blic": 121,
+      "dom": 122,
+      "datas": 123,
+      "et": 124,
+      "etic": 125,
+      "nth": 126,
+      "ou": 127,
+      "pu": 128,
+      "rce": 129,
+      "sy": 130,
+      "sou": 131,
+      "{\"": 132,
+      "čĊ": 133,
+      "domain": 134,
+      "dataset": 135,
+      "nthetic": 136,
+      "public": 137,
+      "synthetic": 138,
+      "source": 139,
+      "Ġwater": 140,
+      "Ġc": 141,
+      "oil": 142,
+      "Ġirrigation": 143,
+      "ing": 144,
+      "tag": 145,
+      "wth": 146,
+      "Ġg": 147,
+      "and": 148,
+      "rowth": 149,
+      "if": 150,
+      "Ġre": 151,
+      "li": 152,
+      "st": 153,
+      "Ġm": 154,
+      "Ġcrop": 155,
+      "Ġgrowth": 156,
+      "ac": 157,
+      "el": 158,
+      "ut": 159,
+      "ent": 160,
+      "Ġf": 161,
+      "Ġo": 162,
+      "mp": 163,
+      "ant": 164,
+      "ea": 165,
+      "or": 166,
+      "pp": 167,
+      "qu": 168,
+      "Ġand": 169,
+      "Ġsoil": 170,
+      "ific": 171,
+      "tages": 172,
+      "utri": 173,
+      "Ġimp": 174,
+      "du": 175,
+      "tro": 176,
+      "rip": 177,
+      "duc": 178,
+      "Irrigation": 179,
+      "ab": 180,
+      "pti": 181,
+      "rac": 182,
+      "ust": 183,
+      "Ġh": 184,
+      "tili": 185,
+      "ainab": 186,
+      "ertili": 187,
+      "tices": 188,
+      "Ġopti": 189,
+      "ractices": 190,
+      "ustainab": 191,
+      "Ġoptim": 192,
+      "ustainable": 193,
+      "ec": 194,
+      "sture": 195,
+      "Ġn": 196,
+      "ther": 197,
+      "est": 198,
+      "oisture": 199,
+      "eather": 200,
+      "Ġstages": 201,
+      "ew": 202,
+      "ire": 203,
+      "iew": 204,
+      "ment": 205,
+      "ver": 206,
+      "view": 207,
+      "rov": 208,
+      "quire": 209,
+      "Ġimprov": 210,
+      "verview": 211,
+      "ĠM": 212,
+      "al": 213,
+      "cy": 214,
+      "ff": 215,
+      "han": 216,
+      "ency": 217,
+      "ĠIrrigation": 218,
+      "Ġpractices": 219,
+      "Crop": 220,
+      "gn": 221,
+      "gen": 222,
+      "iu": 223,
+      "itro": 224,
+      "ign": 225,
+      "ke": 226,
+      "ly": 227,
+      "lant": 228,
+      "otas": 229,
+      "siu": 230,
+      "upp": 231,
+      "Ġli": 232,
+      "astag": 233,
+      "Ġsign": 234,
+      "Ġsupp": 235,
+      "Ġwastag": 236,
+      "Ġplant": 237,
+      "Ġpotas": 238,
+      "Ġreduc": 239,
+      "Ġrequire": 240,
+      "ents": 241,
+      "antly": 242,
+      "ort": 243,
+      "ificantly": 244,
+      "utrients": 245,
+      "Ġnitro": 246,
+      "sium": 247,
+      "Ġlike": 248,
+      "Ġsignificantly": 249,
+      "Ġsupport": 250,
+      "Ġwastage": 251,
+      "Ġpotassium": 252,
+      "Ġreduces": 253,
+      "Ġnitrogen": 254,
+      "Ġa": 255,
+      "Ġmoisture": 256,
+      "der": 257,
+      "iz": 258,
+      "nder": 259,
+      "ps": 260,
+      "se": 261,
+      "use": 262,
+      "Ġuse": 263,
+      "anding": 264,
+      "standing": 265,
+      "elps": 266,
+      "Ġhelps": 267,
+      "Ġoptimiz": 268,
+      "nderstanding": 269,
+      "Ġoptimize": 270,
+      "Drip": 271,
+      "ar": 272,
+      "ch": 273,
+      "ds": 274,
+      "dul": 275,
+      "drip": 276,
+      "ere": 277,
+      "eth": 278,
+      "ement": 279,
+      "edul": 280,
+      "fere": 281,
+      "ming": 282,
+      "nt": 283,
+      "ods": 284,
+      "pec": 285,
+      "uid": 286,
+      "vel": 287,
+      "zer": 288,
+      "ĠG": 289,
+      "ĠS": 290,
+      "Ġle": 291,
+      "Ġon": 292,
+      "anag": 293,
+      "ics": 294,
+      "asics": 295,
+      "Ġspec": 296,
+      "lication": 297,
+      "iffere": 298,
+      "Ġcrops": 299,
+      "act": 300,
+      "pplication": 301,
+      "ertilizer": 302,
+      "arming": 303,
+      "chedul": 304,
+      "ethods": 305,
+      "uide": 306,
+      "vels": 307,
+      "Ġlevels": 308,
+      "anagement": 309,
+      "Ġspecific": 310,
+      "ifferent": 311,
+      "cheduling": 312,
+      "Soil": 313,
+      "Sustainable": 314,
+      "soil": 315,
+      "sustainable": 316,
+      "Pest": 317,
+      "Weather": 318,
+      "lon": 319,
+      "pest": 320,
+      "ty": 321,
+      "weather": 322,
+      "Ġlon": 323,
+      "term": 324,
+      "Ġfertili": 325,
+      "utrition": 326,
+      "Ġimprove": 327,
+      "Ġlong": 328,
+      "Ġfertility": 329,
+      "Overview": 330,
+      "crop": 331,
+      "ĠOverview": 332,
+      "Ġoverview": 333,
+      "at": 334,
+      "ate": 335,
+      "cre": 336,
+      "eff": 337,
+      "gan": 338,
+      "ges": 339,
+      "iel": 340,
+      "iency": 341,
+      "lth": 342,
+      "ms": 343,
+      "ntion": 344,
+      "ste": 345,
+      "sen": 346,
+      "tain": 347,
+      "yiel": 348,
+      "yste": 349,
+      "Ġ1": 350,
+      "Ġin": 351,
+      "Ġes": 352,
+      "Ġen": 353,
+      "Ġeff": 354,
+      "Ġyiel": 355,
+      "tial": 356,
+      "requ": 357,
+      "tention": 358,
+      "roduc": 359,
+      "ontro": 360,
+      "iciency": 361,
+      "ases": 362,
+      "Ġsyste": 363,
+      "aintain": 364,
+      "Ġis": 365,
+      "omate": 366,
+      "Ġproduc": 367,
+      "Ġchan": 368,
+      "Ġcontro": 369,
+      "Ġretention": 370,
+      "Ġmat": 371,
+      "utomate": 372,
+      "Ġfor": 373,
+      "Ġfrequ": 374,
+      "ealth": 375,
+      "Ġhealth": 376,
+      "Ġoptimal": 377,
+      "ect": 378,
+      "Ġimproves": 379,
+      "ffect": 380,
+      "hance": 381,
+      "Ġaffect": 382,
+      "creases": 383,
+      "ganic": 384,
+      "sential": 385,
+      "Ġincreases": 386,
+      "Ġessential": 387,
+      "Ġenhance": 388,
+      "Ġefficiency": 389,
+      "Ġyield": 390,
+      "Ġsystems": 391,
+      "aintaining": 392,
+      "Ġproduction": 393,
+      "Ġchanges": 394,
+      "Ġcontrol": 395,
+      "Ġmatter": 396,
+      "utomated": 397,
+      "Ġfrequency": 398,
+      "Ġhealthy": 399,
+      "Nutrients": 400,
+      "nutrients": 401,
+      "Ġ5": 402,
+      "Understanding": 403,
+      "understanding": 404,
+      "Ġ2": 405,
+      "Ġ4": 406,
+      "Application": 407,
+      "Basics": 408,
+      "Different": 409,
+      "Fertilizer": 410,
+      "Farming": 411,
+      "Imp": 412,
+      "Practices": 413,
+      "basics": 414,
+      "different": 415,
+      "fertilizer": 416,
+      "irrigation": 417,
+      "Ġ6": 418,
+      "Ġ7": 419,
+      "Ġ8": 420,
+      "ĠCrop": 421,
+      "ĠApplication": 422,
+      "ĠBasics": 423,
+      "ĠFarming": 424,
+      "ĠImp": 425,
+      "ĠPractices": 426,
+      "Ġbasics": 427,
+      "Ġscheduling": 428,
+      "Ġguide": 429,
+      "Ġmethods": 430,
+      "Ġmanagement": 431,
+      "Ġfarming": 432,
+      "Ġimpact": 433,
+      "ĠMoisture": 434,
+      "ĠMethods": 435,
+      "ĠManagement": 436,
+      "Ġapplication": 437,
+      "ĠGrowth": 438,
+      "ĠGuide": 439,
+      "ĠStages": 440,
+      "ĠScheduling": 441,
+      "ĠImpact": 442,
+      "Nutrition": 443,
+      "Ġ3": 444,
+      "ĠNutrition": 445,
+      "Ġnutrition": 446,
+      "Automated": 447,
+      "Maintaining": 448,
+      "Or": 449,
+      "automated": 450,
+      "maintaining": 451,
+      "organic": 452,
+      "Organic": 453,
+      "Re": 454,
+      "Water": 455,
+      "ĠRe": 456,
+      "ĠWater": 457,
+      "quirement": 458,
+      "Ġrequirement": 459,
+      "ĠRequirement": 460,
+      "Ġ9": 461
+    },
+    "merges": [
+      [
+        "Ġ",
+        "\""
+      ],
+      [
+        "\"",
+        ":"
+      ],
+      [
+        "t",
+        "i"
+      ],
+      [
+        "\"",
+        ","
+      ],
+      [
+        "l",
+        "e"
+      ],
+      [
+        "r",
+        "i"
+      ],
+      [
+        "a",
+        "n"
+      ],
+      [
+        "r",
+        "e"
+      ],
+      [
+        "t",
+        "e"
+      ],
+      [
+        "a",
+        "g"
+      ],
+      [
+        "r",
+        "o"
+      ],
+      [
+        "i",
+        "n"
+      ],
+      [
+        "o",
+        "n"
+      ],
+      [
+        "t",
+        "h"
+      ],
+      [
+        "t",
+        "u"
+      ],
+      [
+        "tu",
+        "re"
+      ],
+      [
+        "i",
+        "c"
+      ],
+      [
+        "u",
+        "l"
+      ],
+      [
+        "e",
+        "s"
+      ],
+      [
+        "ti",
+        "on"
+      ],
+      [
+        ".",
+        "\","
+      ],
+      [
+        "c",
+        "le"
+      ],
+      [
+        "c",
+        "ul"
+      ],
+      [
+        "t",
+        "le"
+      ],
+      [
+        "x",
+        "t"
+      ],
+      [
+        "ti",
+        "tle"
+      ],
+      [
+        "ri",
+        "cul"
+      ],
+      [
+        "te",
+        "xt"
+      ],
+      [
+        "ag",
+        "ricul"
+      ],
+      [
+        "cle",
+        "an"
+      ],
+      [
+        "agricul",
+        "ture"
+      ],
+      [
+        "a",
+        "s"
+      ],
+      [
+        "Ġ",
+        "s"
+      ],
+      [
+        "a",
+        "in"
+      ],
+      [
+        "a",
+        "tion"
+      ],
+      [
+        "e",
+        "r"
+      ],
+      [
+        "e",
+        "n"
+      ],
+      [
+        "Ġ",
+        "i"
+      ],
+      [
+        "g",
+        "ation"
+      ],
+      [
+        "r",
+        "ri"
+      ],
+      [
+        "ti",
+        "c"
+      ],
+      [
+        "rri",
+        "gation"
+      ],
+      [
+        "te",
+        "r"
+      ],
+      [
+        "o",
+        "i"
+      ],
+      [
+        "t",
+        "as"
+      ],
+      [
+        "Ġ",
+        "w"
+      ],
+      [
+        "i",
+        "d"
+      ],
+      [
+        "l",
+        "ic"
+      ],
+      [
+        "c",
+        "e"
+      ],
+      [
+        "o",
+        "m"
+      ],
+      [
+        "ro",
+        "p"
+      ],
+      [
+        "a",
+        "ter"
+      ],
+      [
+        "Ġ",
+        "p"
+      ],
+      [
+        "\"",
+        "}"
+      ],
+      [
+        "a",
+        "tas"
+      ],
+      [
+        "b",
+        "lic"
+      ],
+      [
+        "d",
+        "om"
+      ],
+      [
+        "d",
+        "atas"
+      ],
+      [
+        "e",
+        "t"
+      ],
+      [
+        "e",
+        "tic"
+      ],
+      [
+        "n",
+        "th"
+      ],
+      [
+        "o",
+        "u"
+      ],
+      [
+        "p",
+        "u"
+      ],
+      [
+        "r",
+        "ce"
+      ],
+      [
+        "s",
+        "y"
+      ],
+      [
+        "s",
+        "ou"
+      ],
+      [
+        "{",
+        "\""
+      ],
+      [
+        "č",
+        "Ċ"
+      ],
+      [
+        "dom",
+        "ain"
+      ],
+      [
+        "datas",
+        "et"
+      ],
+      [
+        "nth",
+        "etic"
+      ],
+      [
+        "pu",
+        "blic"
+      ],
+      [
+        "sy",
+        "nthetic"
+      ],
+      [
+        "sou",
+        "rce"
+      ],
+      [
+        "Ġw",
+        "ater"
+      ],
+      [
+        "Ġ",
+        "c"
+      ],
+      [
+        "oi",
+        "l"
+      ],
+      [
+        "Ġi",
+        "rrigation"
+      ],
+      [
+        "in",
+        "g"
+      ],
+      [
+        "t",
+        "ag"
+      ],
+      [
+        "w",
+        "th"
+      ],
+      [
+        "Ġ",
+        "g"
+      ],
+      [
+        "an",
+        "d"
+      ],
+      [
+        "ro",
+        "wth"
+      ],
+      [
+        "i",
+        "f"
+      ],
+      [
+        "Ġ",
+        "re"
+      ],
+      [
+        "l",
+        "i"
+      ],
+      [
+        "s",
+        "t"
+      ],
+      [
+        "Ġ",
+        "m"
+      ],
+      [
+        "Ġc",
+        "rop"
+      ],
+      [
+        "Ġg",
+        "rowth"
+      ],
+      [
+        "a",
+        "c"
+      ],
+      [
+        "e",
+        "l"
+      ],
+      [
+        "u",
+        "t"
+      ],
+      [
+        "en",
+        "t"
+      ],
+      [
+        "Ġ",
+        "f"
+      ],
+      [
+        "Ġ",
+        "o"
+      ],
+      [
+        "m",
+        "p"
+      ],
+      [
+        "an",
+        "t"
+      ],
+      [
+        "e",
+        "a"
+      ],
+      [
+        "o",
+        "r"
+      ],
+      [
+        "p",
+        "p"
+      ],
+      [
+        "q",
+        "u"
+      ],
+      [
+        "Ġ",
+        "and"
+      ],
+      [
+        "Ġs",
+        "oil"
+      ],
+      [
+        "if",
+        "ic"
+      ],
+      [
+        "tag",
+        "es"
+      ],
+      [
+        "ut",
+        "ri"
+      ],
+      [
+        "Ġi",
+        "mp"
+      ],
+      [
+        "d",
+        "u"
+      ],
+      [
+        "t",
+        "ro"
+      ],
+      [
+        "ri",
+        "p"
+      ],
+      [
+        "du",
+        "c"
+      ],
+      [
+        "I",
+        "rrigation"
+      ],
+      [
+        "a",
+        "b"
+      ],
+      [
+        "p",
+        "ti"
+      ],
+      [
+        "r",
+        "ac"
+      ],
+      [
+        "u",
+        "st"
+      ],
+      [
+        "Ġ",
+        "h"
+      ],
+      [
+        "ti",
+        "li"
+      ],
+      [
+        "ain",
+        "ab"
+      ],
+      [
+        "er",
+        "tili"
+      ],
+      [
+        "tic",
+        "es"
+      ],
+      [
+        "Ġo",
+        "pti"
+      ],
+      [
+        "rac",
+        "tices"
+      ],
+      [
+        "ust",
+        "ainab"
+      ],
+      [
+        "Ġopti",
+        "m"
+      ],
+      [
+        "ustainab",
+        "le"
+      ],
+      [
+        "e",
+        "c"
+      ],
+      [
+        "s",
+        "ture"
+      ],
+      [
+        "Ġ",
+        "n"
+      ],
+      [
+        "th",
+        "er"
+      ],
+      [
+        "es",
+        "t"
+      ],
+      [
+        "oi",
+        "sture"
+      ],
+      [
+        "ea",
+        "ther"
+      ],
+      [
+        "Ġs",
+        "tages"
+      ],
+      [
+        "e",
+        "w"
+      ],
+      [
+        "i",
+        "re"
+      ],
+      [
+        "i",
+        "ew"
+      ],
+      [
+        "m",
+        "ent"
+      ],
+      [
+        "v",
+        "er"
+      ],
+      [
+        "v",
+        "iew"
+      ],
+      [
+        "ro",
+        "v"
+      ],
+      [
+        "qu",
+        "ire"
+      ],
+      [
+        "Ġimp",
+        "rov"
+      ],
+      [
+        "ver",
+        "view"
+      ],
+      [
+        "Ġ",
+        "M"
+      ],
+      [
+        "a",
+        "l"
+      ],
+      [
+        "c",
+        "y"
+      ],
+      [
+        "f",
+        "f"
+      ],
+      [
+        "h",
+        "an"
+      ],
+      [
+        "en",
+        "cy"
+      ],
+      [
+        "Ġ",
+        "Irrigation"
+      ],
+      [
+        "Ġp",
+        "ractices"
+      ],
+      [
+        "C",
+        "rop"
+      ],
+      [
+        "g",
+        "n"
+      ],
+      [
+        "g",
+        "en"
+      ],
+      [
+        "i",
+        "u"
+      ],
+      [
+        "i",
+        "tro"
+      ],
+      [
+        "i",
+        "gn"
+      ],
+      [
+        "k",
+        "e"
+      ],
+      [
+        "l",
+        "y"
+      ],
+      [
+        "l",
+        "ant"
+      ],
+      [
+        "o",
+        "tas"
+      ],
+      [
+        "s",
+        "iu"
+      ],
+      [
+        "u",
+        "pp"
+      ],
+      [
+        "Ġ",
+        "li"
+      ],
+      [
+        "as",
+        "tag"
+      ],
+      [
+        "Ġs",
+        "ign"
+      ],
+      [
+        "Ġs",
+        "upp"
+      ],
+      [
+        "Ġw",
+        "astag"
+      ],
+      [
+        "Ġp",
+        "lant"
+      ],
+      [
+        "Ġp",
+        "otas"
+      ],
+      [
+        "Ġre",
+        "duc"
+      ],
+      [
+        "Ġre",
+        "quire"
+      ],
+      [
+        "ent",
+        "s"
+      ],
+      [
+        "ant",
+        "ly"
+      ],
+      [
+        "or",
+        "t"
+      ],
+      [
+        "ific",
+        "antly"
+      ],
+      [
+        "utri",
+        "ents"
+      ],
+      [
+        "Ġn",
+        "itro"
+      ],
+      [
+        "siu",
+        "m"
+      ],
+      [
+        "Ġli",
+        "ke"
+      ],
+      [
+        "Ġsign",
+        "ificantly"
+      ],
+      [
+        "Ġsupp",
+        "ort"
+      ],
+      [
+        "Ġwastag",
+        "e"
+      ],
+      [
+        "Ġpotas",
+        "sium"
+      ],
+      [
+        "Ġreduc",
+        "es"
+      ],
+      [
+        "Ġnitro",
+        "gen"
+      ],
+      [
+        "Ġ",
+        "a"
+      ],
+      [
+        "Ġm",
+        "oisture"
+      ],
+      [
+        "d",
+        "er"
+      ],
+      [
+        "i",
+        "z"
+      ],
+      [
+        "n",
+        "der"
+      ],
+      [
+        "p",
+        "s"
+      ],
+      [
+        "s",
+        "e"
+      ],
+      [
+        "u",
+        "se"
+      ],
+      [
+        "Ġ",
+        "use"
+      ],
+      [
+        "and",
+        "ing"
+      ],
+      [
+        "st",
+        "anding"
+      ],
+      [
+        "el",
+        "ps"
+      ],
+      [
+        "Ġh",
+        "elps"
+      ],
+      [
+        "Ġoptim",
+        "iz"
+      ],
+      [
+        "nder",
+        "standing"
+      ],
+      [
+        "Ġoptimiz",
+        "e"
+      ],
+      [
+        "D",
+        "rip"
+      ],
+      [
+        "a",
+        "r"
+      ],
+      [
+        "c",
+        "h"
+      ],
+      [
+        "d",
+        "s"
+      ],
+      [
+        "d",
+        "ul"
+      ],
+      [
+        "d",
+        "rip"
+      ],
+      [
+        "e",
+        "re"
+      ],
+      [
+        "e",
+        "th"
+      ],
+      [
+        "e",
+        "ment"
+      ],
+      [
+        "e",
+        "dul"
+      ],
+      [
+        "f",
+        "ere"
+      ],
+      [
+        "m",
+        "ing"
+      ],
+      [
+        "n",
+        "t"
+      ],
+      [
+        "o",
+        "ds"
+      ],
+      [
+        "p",
+        "ec"
+      ],
+      [
+        "u",
+        "id"
+      ],
+      [
+        "v",
+        "el"
+      ],
+      [
+        "z",
+        "er"
+      ],
+      [
+        "Ġ",
+        "G"
+      ],
+      [
+        "Ġ",
+        "S"
+      ],
+      [
+        "Ġ",
+        "le"
+      ],
+      [
+        "Ġ",
+        "on"
+      ],
+      [
+        "an",
+        "ag"
+      ],
+      [
+        "ic",
+        "s"
+      ],
+      [
+        "as",
+        "ics"
+      ],
+      [
+        "Ġs",
+        "pec"
+      ],
+      [
+        "lic",
+        "ation"
+      ],
+      [
+        "if",
+        "fere"
+      ],
+      [
+        "Ġcrop",
+        "s"
+      ],
+      [
+        "ac",
+        "t"
+      ],
+      [
+        "pp",
+        "lication"
+      ],
+      [
+        "ertili",
+        "zer"
+      ],
+      [
+        "ar",
+        "ming"
+      ],
+      [
+        "ch",
+        "edul"
+      ],
+      [
+        "eth",
+        "ods"
+      ],
+      [
+        "uid",
+        "e"
+      ],
+      [
+        "vel",
+        "s"
+      ],
+      [
+        "Ġle",
+        "vels"
+      ],
+      [
+        "anag",
+        "ement"
+      ],
+      [
+        "Ġspec",
+        "ific"
+      ],
+      [
+        "iffere",
+        "nt"
+      ],
+      [
+        "chedul",
+        "ing"
+      ],
+      [
+        "S",
+        "oil"
+      ],
+      [
+        "S",
+        "ustainable"
+      ],
+      [
+        "s",
+        "oil"
+      ],
+      [
+        "s",
+        "ustainable"
+      ],
+      [
+        "P",
+        "est"
+      ],
+      [
+        "W",
+        "eather"
+      ],
+      [
+        "l",
+        "on"
+      ],
+      [
+        "p",
+        "est"
+      ],
+      [
+        "t",
+        "y"
+      ],
+      [
+        "w",
+        "eather"
+      ],
+      [
+        "Ġ",
+        "lon"
+      ],
+      [
+        "ter",
+        "m"
+      ],
+      [
+        "Ġf",
+        "ertili"
+      ],
+      [
+        "utri",
+        "tion"
+      ],
+      [
+        "Ġimprov",
+        "e"
+      ],
+      [
+        "Ġlon",
+        "g"
+      ],
+      [
+        "Ġfertili",
+        "ty"
+      ],
+      [
+        "O",
+        "verview"
+      ],
+      [
+        "c",
+        "rop"
+      ],
+      [
+        "Ġ",
+        "Overview"
+      ],
+      [
+        "Ġo",
+        "verview"
+      ],
+      [
+        "a",
+        "t"
+      ],
+      [
+        "a",
+        "te"
+      ],
+      [
+        "c",
+        "re"
+      ],
+      [
+        "e",
+        "ff"
+      ],
+      [
+        "g",
+        "an"
+      ],
+      [
+        "g",
+        "es"
+      ],
+      [
+        "i",
+        "el"
+      ],
+      [
+        "i",
+        "ency"
+      ],
+      [
+        "l",
+        "th"
+      ],
+      [
+        "m",
+        "s"
+      ],
+      [
+        "n",
+        "tion"
+      ],
+      [
+        "s",
+        "te"
+      ],
+      [
+        "s",
+        "en"
+      ],
+      [
+        "t",
+        "ain"
+      ],
+      [
+        "y",
+        "iel"
+      ],
+      [
+        "y",
+        "ste"
+      ],
+      [
+        "Ġ",
+        "1"
+      ],
+      [
+        "Ġ",
+        "in"
+      ],
+      [
+        "Ġ",
+        "es"
+      ],
+      [
+        "Ġ",
+        "en"
+      ],
+      [
+        "Ġ",
+        "eff"
+      ],
+      [
+        "Ġ",
+        "yiel"
+      ],
+      [
+        "ti",
+        "al"
+      ],
+      [
+        "re",
+        "qu"
+      ],
+      [
+        "te",
+        "ntion"
+      ],
+      [
+        "ro",
+        "duc"
+      ],
+      [
+        "on",
+        "tro"
+      ],
+      [
+        "ic",
+        "iency"
+      ],
+      [
+        "as",
+        "es"
+      ],
+      [
+        "Ġs",
+        "yste"
+      ],
+      [
+        "ain",
+        "tain"
+      ],
+      [
+        "Ġi",
+        "s"
+      ],
+      [
+        "om",
+        "ate"
+      ],
+      [
+        "Ġp",
+        "roduc"
+      ],
+      [
+        "Ġc",
+        "han"
+      ],
+      [
+        "Ġc",
+        "ontro"
+      ],
+      [
+        "Ġre",
+        "tention"
+      ],
+      [
+        "Ġm",
+        "at"
+      ],
+      [
+        "ut",
+        "omate"
+      ],
+      [
+        "Ġf",
+        "or"
+      ],
+      [
+        "Ġf",
+        "requ"
+      ],
+      [
+        "ea",
+        "lth"
+      ],
+      [
+        "Ġh",
+        "ealth"
+      ],
+      [
+        "Ġoptim",
+        "al"
+      ],
+      [
+        "ec",
+        "t"
+      ],
+      [
+        "Ġimprov",
+        "es"
+      ],
+      [
+        "ff",
+        "ect"
+      ],
+      [
+        "han",
+        "ce"
+      ],
+      [
+        "Ġa",
+        "ffect"
+      ],
+      [
+        "cre",
+        "ases"
+      ],
+      [
+        "gan",
+        "ic"
+      ],
+      [
+        "sen",
+        "tial"
+      ],
+      [
+        "Ġin",
+        "creases"
+      ],
+      [
+        "Ġes",
+        "sential"
+      ],
+      [
+        "Ġen",
+        "hance"
+      ],
+      [
+        "Ġeff",
+        "iciency"
+      ],
+      [
+        "Ġyiel",
+        "d"
+      ],
+      [
+        "Ġsyste",
+        "ms"
+      ],
+      [
+        "aintain",
+        "ing"
+      ],
+      [
+        "Ġproduc",
+        "tion"
+      ],
+      [
+        "Ġchan",
+        "ges"
+      ],
+      [
+        "Ġcontro",
+        "l"
+      ],
+      [
+        "Ġmat",
+        "ter"
+      ],
+      [
+        "utomate",
+        "d"
+      ],
+      [
+        "Ġfrequ",
+        "ency"
+      ],
+      [
+        "Ġhealth",
+        "y"
+      ],
+      [
+        "N",
+        "utrients"
+      ],
+      [
+        "n",
+        "utrients"
+      ],
+      [
+        "Ġ",
+        "5"
+      ],
+      [
+        "U",
+        "nderstanding"
+      ],
+      [
+        "u",
+        "nderstanding"
+      ],
+      [
+        "Ġ",
+        "2"
+      ],
+      [
+        "Ġ",
+        "4"
+      ],
+      [
+        "A",
+        "pplication"
+      ],
+      [
+        "B",
+        "asics"
+      ],
+      [
+        "D",
+        "ifferent"
+      ],
+      [
+        "F",
+        "ertilizer"
+      ],
+      [
+        "F",
+        "arming"
+      ],
+      [
+        "I",
+        "mp"
+      ],
+      [
+        "P",
+        "ractices"
+      ],
+      [
+        "b",
+        "asics"
+      ],
+      [
+        "d",
+        "ifferent"
+      ],
+      [
+        "f",
+        "ertilizer"
+      ],
+      [
+        "i",
+        "rrigation"
+      ],
+      [
+        "Ġ",
+        "6"
+      ],
+      [
+        "Ġ",
+        "7"
+      ],
+      [
+        "Ġ",
+        "8"
+      ],
+      [
+        "Ġ",
+        "Crop"
+      ],
+      [
+        "Ġ",
+        "Application"
+      ],
+      [
+        "Ġ",
+        "Basics"
+      ],
+      [
+        "Ġ",
+        "Farming"
+      ],
+      [
+        "Ġ",
+        "Imp"
+      ],
+      [
+        "Ġ",
+        "Practices"
+      ],
+      [
+        "Ġ",
+        "basics"
+      ],
+      [
+        "Ġs",
+        "cheduling"
+      ],
+      [
+        "Ġg",
+        "uide"
+      ],
+      [
+        "Ġm",
+        "ethods"
+      ],
+      [
+        "Ġm",
+        "anagement"
+      ],
+      [
+        "Ġf",
+        "arming"
+      ],
+      [
+        "Ġimp",
+        "act"
+      ],
+      [
+        "ĠM",
+        "oisture"
+      ],
+      [
+        "ĠM",
+        "ethods"
+      ],
+      [
+        "ĠM",
+        "anagement"
+      ],
+      [
+        "Ġa",
+        "pplication"
+      ],
+      [
+        "ĠG",
+        "rowth"
+      ],
+      [
+        "ĠG",
+        "uide"
+      ],
+      [
+        "ĠS",
+        "tages"
+      ],
+      [
+        "ĠS",
+        "cheduling"
+      ],
+      [
+        "ĠImp",
+        "act"
+      ],
+      [
+        "N",
+        "utrition"
+      ],
+      [
+        "Ġ",
+        "3"
+      ],
+      [
+        "Ġ",
+        "Nutrition"
+      ],
+      [
+        "Ġn",
+        "utrition"
+      ],
+      [
+        "A",
+        "utomated"
+      ],
+      [
+        "M",
+        "aintaining"
+      ],
+      [
+        "O",
+        "r"
+      ],
+      [
+        "a",
+        "utomated"
+      ],
+      [
+        "m",
+        "aintaining"
+      ],
+      [
+        "or",
+        "ganic"
+      ],
+      [
+        "Or",
+        "ganic"
+      ],
+      [
+        "R",
+        "e"
+      ],
+      [
+        "W",
+        "ater"
+      ],
+      [
+        "Ġ",
+        "Re"
+      ],
+      [
+        "Ġ",
+        "Water"
+      ],
+      [
+        "quire",
+        "ment"
+      ],
+      [
+        "Ġrequire",
+        "ment"
+      ],
+      [
+        "ĠRe",
+        "quirement"
+      ],
+      [
+        "Ġ",
+        "9"
+      ]
+    ]
+  }
+}
