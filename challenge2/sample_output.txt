@@ -1,32 +1,32 @@
 === Testing tokenizer on real dataset sentences ===
 
-Original: Maintaining optimal soil moisture improves crop yield.
-Token IDs: [402, 347, 149, 241, 350, 144, 359, 8]
-Tokens: ['Maintaining', 'optimal', 'soil', 'moisture', 'improves', 'crop', 'yield', '.']
-Decoded: Maintaining optimal soil moisture improves crop yield .
-Match: NO
+Original: Sustainable practices improve long-term soil fertility.
+Token IDs: [314, 219, 327, 328, 7, 324, 170, 329, 8]
+Tokens: ['Sustainable', 'Ġpractices', 'Ġimprove', 'Ġlong', '-', 'term', 'Ġsoil', 'Ġfertility', '.']
+Decoded: Sustainable practices improve long-term soil fertility.
+Match: YES
+----------------------------------------------------------------------
+Original: Pest control is essential for healthy crop production.
+Token IDs: [317, 395, 365, 387, 373, 399, 155, 393, 8]        
+Tokens: ['Pest', 'Ġcontrol', 'Ġis', 'Ġessential', 'Ġfor', 'Ġhealthy', 'Ġcrop', 'Ġproduction', '.']
+Decoded: Pest control is essential for healthy crop production.
+Match: YES
+----------------------------------------------------------------------
+Original: Drip irrigation reduces water wastage significantly.
+Token IDs: [271, 143, 253, 140, 251, 249, 8]
+Tokens: ['Drip', 'Ġirrigation', 'Ġreduces', 'Ġwater', 'Ġwastage', 'Ġsignificantly', '.']
+Decoded: Drip irrigation reduces water wastage significantly. 
+Match: YES
 ----------------------------------------------------------------------
 Original: Understanding growth stages helps optimize water use.
-Token IDs: [370, 151, 194, 251, 253, 141, 248, 8]
-Tokens: ['Understanding', 'growth', 'stages', 'helps', 'optimize', 'water', 'use', '.'] 
-Decoded: Understanding growth stages helps optimize water use .
-Match: NO
+Token IDs: [403, 156, 201, 267, 270, 140, 263, 8]
+Tokens: ['Understanding', 'Ġgrowth', 'Ġstages', 'Ġhelps', 'Ġoptimize', 'Ġwater', 'Ġuse', '.']
+Decoded: Understanding growth stages helps optimize water use.
+Match: YES
 ----------------------------------------------------------------------
-Original: Different crops require specific water levels.
-Token IDs: [374, 279, 234, 286, 141, 288, 8]
-Tokens: ['Different', 'crops', 'require', 'specific', 'water', 'levels', '.']
-Decoded: Different crops require specific water levels .
-Match: NO
-----------------------------------------------------------------------
-Original: Automated irrigation systems enhance efficiency.
-Token IDs: [401, 123, 365, 364, 353, 8]
-Tokens: ['Automated', 'irrigation', 'systems', 'enhance', 'efficiency', '.']
-Decoded: Automated irrigation systems enhance efficiency .    
-Match: NO
-----------------------------------------------------------------------
-Original: Automated irrigation systems enhance efficiency.    
-Token IDs: [401, 123, 365, 364, 353, 8]
-Tokens: ['Automated', 'irrigation', 'systems', 'enhance', 'efficiency', '.']
-Decoded: Automated irrigation systems enhance efficiency .    
-Match: NO
+Original: Pest control is essential for healthy crop production.
+Token IDs: [317, 395, 365, 387, 373, 399, 155, 393, 8]        
+Tokens: ['Pest', 'Ġcontrol', 'Ġis', 'Ġessential', 'Ġfor', 'Ġhealthy', 'Ġcrop', 'Ġproduction', '.']
+Decoded: Pest control is essential for healthy crop production.
+Match: YES
 ----------------------------------------------------------------------
