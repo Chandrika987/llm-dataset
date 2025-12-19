@@ -1,0 +1,102 @@
+# 🔥 Challenge 3 — Creating Embeddings from Tokenized Data
+
+## 📌 Objective
+
+The goal of Challenge 3 is to convert tokenized text into **numerical vector representations (embeddings)** that capture semantic information and can be used for downstream NLP tasks such as similarity analysis and classification.
+
+---
+
+## 📂 Input
+
+* Cleaned agricultural text dataset (`.jsonl`)
+* Tokenized text from the previous challenge
+* Vocabulary built from unique tokens
+
+---
+
+## ⚙️ Methodology
+
+### 1️⃣ Data Loading
+
+* The cleaned dataset is read line by line from a JSONL file.
+* Each record contains a text field used for embedding generation.
+* A total of **64 text samples** were processed.
+
+---
+
+### 2️⃣ Tokenization
+
+* Text is converted to lowercase and split into tokens.
+* Tokens represent individual words from the dataset.
+* This step prepares text for numerical representation.
+
+---
+
+### 3️⃣ Vocabulary Construction
+
+* A vocabulary dictionary is created by assigning a **unique ID** to each token.
+* Duplicate tokens are ignored.
+* Final vocabulary size obtained: **56 unique tokens**.
+
+---
+
+### 4️⃣ Embedding Matrix Generation
+
+* An embedding dimension of **128** is chosen.
+* Each token in the vocabulary is mapped to a **128-dimensional vector**.
+* Embeddings are initialized with random values as a baseline representation.
+
+---
+
+### 5️⃣ Saving Embeddings
+
+* Generated embeddings are stored in a text file (`agri_embeddings.txt`).
+* Each line contains a token followed by its embedding vector.
+* This allows reuse in future challenges or ML models.
+
+---
+
+## 📤 Output
+
+```
+Loaded 64 text samples
+Vocabulary size: 56
+Embeddings generated successfully
+Saved to: challenge3/agri_embeddings.txt
+```
+
+---
+
+## 🧠 Key Learnings
+
+* How to convert text into numerical representations
+* Importance of embeddings in NLP pipelines
+* Vocabulary indexing and dimensionality selection
+* Handling real datasets for feature generation
+
+---
+
+## 📌 Significance
+
+Embeddings form the foundation of modern NLP models.
+They allow machines to understand relationships between words and sentences numerically, enabling tasks like similarity detection, clustering, and classification.
+
+---
+
+## 🚀 Future Enhancements
+
+* Train embeddings using Word2Vec (Skip-gram / CBOW)
+* Compute cosine similarity between tokens or sentences
+* Replace random embeddings with learned embeddings
+* Use embeddings in a text classification model
+
+---
+
+## 🏆 Final Status
+
+✅ **Challenge 3 successfully completed**
+The project demonstrates a complete pipeline from cleaned text data to saved embedding representations.
+
+---
+
+
