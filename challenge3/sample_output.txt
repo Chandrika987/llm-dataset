@@ -2,3 +2,8 @@ Loaded 64 text samples
 Vocabulary size: 56
 Embeddings generated successfully
 Saved to: C:\Users\chand\OneDrive\Desktop\llm\challenge3\agri_embeddings.txt
+
+Sentence Similarity Results
+----------------------------
+Similarity (S1 vs S2): -0.294
+Similarity (S1 vs S3): 0.269

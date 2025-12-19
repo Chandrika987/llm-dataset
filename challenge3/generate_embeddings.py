@@ -1,21 +1,18 @@
 import json
 import random
-import numpy as np
 from pathlib import Path
 
-# ---------------- Safe Paths ----------------
+# ---------------- Paths ----------------
 BASE_DIR = Path(__file__).resolve().parent
 DATA_PATH = BASE_DIR.parent / "data" / "cleaned" / "agri_dataset_clean.jsonl"
-OUTPUT_PATH = BASE_DIR / "agri_embeddings.txt"
+OUT_FILE = BASE_DIR / "agri_embeddings.txt"
 
+EMBEDDING_DIM = 8
+random.seed(42)
 
-# ---------------- Simple Tokenizer ----------------
-# (uses whitespace, since your BPE tokenizer is separate)
-def simple_tokenize(text):
-    return text.lower().split()
-
-# ---------------- Load Dataset ----------------
+# ---------------- Load Text ----------------
 texts = []
+
 with open(DATA_PATH, "r", encoding="utf-8") as f:
     for line in f:
         item = json.loads(line)
@@ -24,27 +21,26 @@ with open(DATA_PATH, "r", encoding="utf-8") as f:
 print(f"Loaded {len(texts)} text samples")
 
 # ---------------- Build Vocabulary ----------------
-vocab = {}
-tokenized_texts = []
-
+vocab = set()
 for text in texts:
-    tokens = simple_tokenize(text)
-    tokenized_texts.append(tokens)
-    for token in tokens:
-        if token not in vocab:
-            vocab[token] = len(vocab)
+    for word in text.lower().split():
+        vocab.add(word)
 
-vocab_size = len(vocab)
-embedding_dim = 128
+print(f"Vocabulary size: {len(vocab)}")
 
-print(f"Vocabulary size: {vocab_size}")
+# ---------------- Generate Random Embeddings ----------------
+embeddings = {}
 
-# ---------------- Initialize Embeddings ----------------
-# Random initialization (like Word2Vec start)
-embeddings = np.random.randn(vocab_size, embedding_dim).astype(np.float32)
+for word in vocab:
+    embeddings[word] = [
+        round(random.uniform(-1, 1), 4)
+        for _ in range(EMBEDDING_DIM)
+    ]
 
-# ---------------- Save Output ----------------
-np.save(OUTPUT_PATH, embeddings)
+# ---------------- Save as TEXT ----------------
+with open(OUT_FILE, "w", encoding="utf-8") as f:
+    for word, vector in embeddings.items():
+        f.write(word + " " + " ".join(map(str, vector)) + "\n")
 
 print("Embeddings generated successfully")
-print("Saved to:", OUTPUT_PATH)
+print(f"Saved to: {OUT_FILE}")
