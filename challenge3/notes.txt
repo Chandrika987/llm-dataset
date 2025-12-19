@@ -100,3 +100,72 @@ The project demonstrates a complete pipeline from cleaned text data to saved emb
 ---
 
 
+
+
+# 🔹 Challenge 3 — Similarity Step Notes
+
+## 🔸 Objective
+
+To measure **semantic similarity between sentences** using the generated word embeddings and verify that embeddings capture meaningful relationships in text.
+
+---
+
+## 🔸 Approach Used
+
+* Each sentence is tokenized into words
+* Word embeddings are retrieved for each token
+* Sentence embedding is computed as the **average of word vectors**
+* **Cosine similarity** is used to compare sentence embeddings
+
+---
+
+## 🔸 Why Cosine Similarity
+
+* Measures **directional similarity**, not magnitude
+* Commonly used in NLP for semantic comparison
+* Values range from:
+
+  * **1.0** → highly similar
+  * **0.0** → unrelated
+  * **-1.0** → opposite meaning
+
+---
+
+## 🔸 Example Sentences
+
+* Sentence 1: *“soil moisture improves crop yield”*
+* Sentence 2: *“irrigation increases agricultural productivity”*
+* Sentence 3: *“weather affects daily routine”*
+
+---
+
+## 🔸 Sample Output
+
+```
+Similarity (S1 vs S2): 0.68
+Similarity (S1 vs S3): 0.25
+```
+
+---
+
+## 🔸 Interpretation
+
+* Sentences related to **agriculture and irrigation** show **higher similarity**
+* Unrelated sentences show **lower similarity**
+* This confirms that embeddings capture **semantic meaning**
+
+---
+
+## 🔸 Learning Outcome
+
+* Demonstrated sentence-level semantic understanding
+* Validated embedding quality without heavy ML libraries
+* Implemented similarity analysis using pure Python
+
+---
+
+## 🔹 One-Line Explanation 
+
+> Sentence similarity was computed by averaging word embeddings and applying cosine similarity to compare semantic closeness.
+
+---
